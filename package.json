@@ -1,0 +1,28 @@
+{
+  "name": "postman-sync-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Smart 3-way merge for OpenAPI → Postman collections",
+  "license": "MIT",
+  "author": "Darwis Hathibi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darwishathibi/postman-sync.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {}
+}
