@@ -1,0 +1,43 @@
+name: 'postman-sync'
+description: 'Smart 3-way merge for OpenAPI specs → Postman collections. Preserves Tests, Pre-request scripts, Saved Examples.'
+author: 'darwishathibi'
+
+branding:
+  icon: 'refresh-cw'
+  color: 'orange'
+
+inputs:
+  spec:
+    description: 'Path or URL to the OpenAPI spec'
+    required: true
+  workspace-id:
+    description: 'Postman workspace ID'
+    required: true
+  api-key:
+    description: 'Postman API key (use a secret)'
+    required: true
+  apply:
+    description: 'If true, apply changes. If false (default), dry-run only.'
+    required: false
+    default: 'false'
+  strict:
+    description: 'Exit non-zero if any 🛑 conflicts are detected.'
+    required: false
+    default: 'false'
+  format:
+    description: 'Output format for diff: tty | md'
+    required: false
+    default: 'md'
+  collection-name:
+    description: 'Target collection name (created on first sync if missing).'
+    required: false
+
+outputs:
+  conflicts-count:
+    description: 'Total count of conflicts detected.'
+  summary:
+    description: 'Human-readable summary line.'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
