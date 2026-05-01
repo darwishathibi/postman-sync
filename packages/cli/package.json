@@ -1,15 +1,15 @@
 {
   "name": "@postman-sync/cli",
+  "type": "module",
   "version": "0.0.0",
   "description": "CLI for postman-sync — sync OpenAPI specs into Postman collections without losing manual edits.",
   "license": "MIT",
-  "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
     "postman-sync": "./bin/postman-sync.js"
   },
-  "files": ["dist", "bin"],
+  "files": ["bin", "dist"],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit"

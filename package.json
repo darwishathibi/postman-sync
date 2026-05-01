@@ -2,6 +2,7 @@
   "name": "postman-sync-monorepo",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "description": "Smart 3-way merge for OpenAPI → Postman collections",
   "license": "MIT",
   "author": "Darwis Hathibi",
@@ -21,12 +22,21 @@
     "test:coverage": "vitest run --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,js,mjs,cjs,json,yaml,yml,md}": [
+      "eslint --fix"
+    ]
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^3.0.0",
     "@types/node": "^20.0.0",
     "@vitest/coverage-v8": "^2.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-format": "^2.0.1",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
     "typescript": "^5.5.0",
     "vitest": "^2.0.0"
   }

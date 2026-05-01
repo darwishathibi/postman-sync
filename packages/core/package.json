@@ -1,17 +1,17 @@
 {
   "name": "@postman-sync/core",
+  "type": "module",
   "version": "0.0.0",
   "description": "Pure 3-way merge engine for postman-sync. Zero I/O, zero runtime deps.",
   "license": "MIT",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     }
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": ["dist"],
   "scripts": {
     "build": "tsc -p tsconfig.json",

@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import * as core from './index.ts';
 
 describe('@postman-sync/core', () => {
